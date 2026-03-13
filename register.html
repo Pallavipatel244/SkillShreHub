@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Register</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="page">
+
+<div class="card">
+
+<h1 class="logo">SkillShareHub</h1>
+<p class="subtitle">Create your account</p>
+
+<div class="profile-upload">
+<label class="profile-circle">
+<img id="profilePreview" src="https://cdn-icons-png.flaticon.com/512/149/149071.png">
+<input type="file" id="profileImage" hidden>
+</label>
+</div>
+
+<input type="text" id="name" placeholder="Full Name">
+
+<input type="email" id="email" placeholder="Email">
+
+<div class="password-box">
+<input type="password" id="password" placeholder="Password">
+<span class="toggle-password" onclick="togglePassword()">👁</span>
+</div>
+
+<p id="emailError" class="error"></p>
+
+<div class="role-selection">
+
+<label class="role">
+<input type="radio" name="role" value="student" checked>
+<span>🎓 Student</span>
+</label>
+
+<label class="role">
+<input type="radio" name="role" value="teacher">
+<span>👨‍🏫 Teacher</span>
+</label>
+
+<label class="role">
+<input type="radio" name="role" value="employee">
+<span>💼 Employee</span>
+</label>
+
+</div>
+
+<button onclick="register()">Create Account</button>
+
+<div class="login-link">
+Already have an account?
+<a href="login.html">Sign In</a>
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

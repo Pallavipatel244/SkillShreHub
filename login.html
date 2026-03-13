@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Campus Knowledge Hub</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="main-container">
+
+<div class="left-panel">
+
+<h1>Welcome Back</h1>
+<p>Login to continue sharing knowledge with your campus.</p>
+
+<img src="https://cdn-icons-png.flaticon.com/512/4140/4140037.png">
+
+</div>
+
+<div class="right-panel">
+
+<h2>Login</h2>
+
+<input type="email" id="email" placeholder="Email">
+<span id="emailError" class="error"></span>
+
+<input type="password" id="password" placeholder="Password">
+<span id="passwordError" class="error"></span>
+
+<button onclick="login()">Login</button>
+
+<div id="messageBox"></div>
+
+<p class="link">
+Don't have an account?
+<a href="register.html">Register</a>
+</p>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

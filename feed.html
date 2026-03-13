@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Campus Knowledge Hub</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="feed.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+<div class="logo">ShareSkillHub</div>
+
+<div class="nav-actions">
+<input type="text" placeholder="Search posts..." class="search">
+<button class="logout-btn" onclick="logout()">Logout</button>
+</div>
+
+</header>
+
+
+<div class="layout">
+
+<!-- LEFT SIDEBAR -->
+
+<div class="sidebar">
+
+<h3>Explore Skills</h3>
+
+<div class="sidebar">
+
+<h3>Explore Skills</h3>
+
+<ul>
+<li># Java</li>
+<li># Spring Boot</li>
+<li># Flutter</li>
+<li># DSA</li>
+<li># System Design</li>
+</ul>
+
+<hr style="margin:15px 0">
+
+<h3>My Activity</h3>
+
+<ul>
+<li onclick="loadPosts()">🏠 Feed</li>
+<li onclick="loadArchivedPosts()">📦 Archived Posts</li>
+</ul>
+
+</div>
+
+</div>
+
+
+<!-- MAIN FEED -->
+
+<div class="feed">
+
+<div class="create-post">
+
+<input type="text" id="title" placeholder="Post title">
+
+<textarea id="content" placeholder="Share knowledge or ask question..."></textarea>
+
+<input type="text" id="topic" placeholder="#topic">
+
+<div class="image-upload">
+
+<label for="image" class="upload-btn">📷 Add Image</label>
+
+<input type="file" id="image" hidden>
+
+<button onclick="createPost()" class="publish-btn">Publish</button>
+
+</div>
+
+<div id="imagePreview"></div>
+
+</div>
+
+
+<!-- POSTS SHOULD BE HERE -->
+
+<div id="posts"></div>
+
+</div>
+
+
+<!-- RIGHT PANEL -->
+
+<div class="right-panel">
+
+<h3>Popular Discussions</h3>
+
+<div class="trend">🔥 Java Interview Questions</div>
+<div class="trend">🔥 Spring Boot Security</div>
+<div class="trend">🔥 Flutter UI Projects</div>
+<div class="trend">🔥 DSA Preparation</div>
+
+<hr style="margin:15px 0">
+
+<h3>Top Contributors</h3>
+
+<div class="trend">👨‍💻 Rahul Sharma</div>
+<div class="trend">👩‍💻 Sneha Patel</div>
+<div class="trend">👨‍💻 Aman Verma</div>
+
+</div>
+
+
+<!-- DELETE MODAL -->
+
+<div id="deleteModal" class="delete-modal">
+
+<div class="delete-box">
+
+<p>Delete this post?</p>
+
+<div class="delete-actions">
+
+<button onclick="confirmDelete()" class="confirm-delete">
+Delete
+</button>
+
+<button onclick="closeDeleteModal()" class="cancel-delete">
+Cancel
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<script src="script.js"></script>
+<div id="editModal" class="edit-modal">
+
+<div class="edit-box">
+
+<h3>Edit Post</h3>
+
+<input type="text" id="editTitle" placeholder="Title">
+
+<textarea id="editContent" placeholder="Content"></textarea>
+
+<input type="text" id="editTopic" placeholder="Topic">
+
+<div class="edit-actions">
+
+<button onclick="saveEditPost()">Save</button>
+
+<button onclick="closeEditModal()">Cancel</button>
+
+</div>
+
+</div>
+
+</div>
+</body>
+</html>
