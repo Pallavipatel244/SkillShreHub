@@ -13,39 +13,31 @@
 
 </head>
 
-<body>
+<body class="page">
 
-<div class="main-container">
+<div class="card">
 
-<div class="left-panel">
-
-<h1>Welcome Back</h1>
-<p>Login to continue sharing knowledge with your campus.</p>
-
-<img src="https://cdn-icons-png.flaticon.com/512/4140/4140037.png">
-
-</div>
-
-<div class="right-panel">
-
-<h2>Login</h2>
+<h2 class="logo">Campus Knowledge Hub</h2>
+<p class="subtitle">Login to continue sharing knowledge with your campus</p>
 
 <input type="email" id="email" placeholder="Email">
 <span id="emailError" class="error"></span>
 
+<div class="password-box">
 <input type="password" id="password" placeholder="Password">
+<span class="toggle-password" onclick="togglePassword()">👁</span>
+</div>
+
 <span id="passwordError" class="error"></span>
 
 <button onclick="login()">Login</button>
 
-<div id="messageBox"></div>
+<div id="messageBox" class="message"></div>
 
-<p class="link">
+<p class="login-link">
 Don't have an account?
 <a href="register.html">Register</a>
 </p>
-
-</div>
 
 </div>
 
